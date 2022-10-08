@@ -1,5 +1,6 @@
 require_relative 'spec_helper'
 require_relative '../control_flow'
+require 'pry'
 
 describe '#admin_login' do
   
@@ -8,6 +9,7 @@ describe '#admin_login' do
   end
   
   it 'returns "Access granted" if the username is "ADMIN" and the password is "12345"' do
+    # binding.pry
     expect(admin_login('ADMIN', '12345')).to eq('Access granted')
   end
   
